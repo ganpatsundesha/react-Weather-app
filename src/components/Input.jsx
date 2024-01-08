@@ -4,14 +4,10 @@ import { data } from "autoprefixer";
 
 const Input = () => {
     const weather = useWeather();
-    console.log(weather);
 
     const getData = (e) => {
         e.preventDefault();
         weather.fetchData();
-        if (data == "") {
-            console.log("empty");
-        }
     };
     return (
         <>

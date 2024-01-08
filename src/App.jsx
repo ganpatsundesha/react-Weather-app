@@ -11,8 +11,8 @@ const App = () => {
     }, []);
     return (
         <>
-            <div className="p-6 main-box bg-[#17294E] h-[100vh] flex bg bg-[url('http://surl.li/ozcow')]">
-                <div className="relative overflow-hidden rounded-3xl border- z-10 flex flex-col m-auto px-[24px] py-[40px] shadow-2xl w-max justify-center bg-gradient-to-br  from-[#9CBDFF] to-[#6498FF]">
+            <div className="p-6 main-box bg-[#17294E] h-[100vh] flex bg bg-[url('https://images.unsplash.com/photo-1471922694854-ff1b63b20054?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')]">
+                <div className="relative sm:min-w-[500px] overflow-hidden rounded-3xl border- z-10 flex flex-col m-auto px-[24px] py-[40px] shadow-2xl w-max justify-center bg-gradient-to-br  from-[#9CBDFF] to-[#6498FF]">
                     <h1 className="text-5xl font-semibold mb-8 relative z-10">
                         Weather Forcast
                     </h1>

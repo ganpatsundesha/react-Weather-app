@@ -10,10 +10,23 @@ export const useWeather = () => {
 export const WeatherProvider = (props) => {
     const [data, setData] = useState(null);
     const [searchCity, setSearchCity] = useState("");
+    const [errorText, setErrorText] = useState(false)
+
 
     const fetchData = async () => {
-        const response = await getWeatherData(searchCity);
-        setData(response);
+        if (searchCity.trim() === '') {
+            setErrorText(true)
+        }
+        else {
+            setErrorText(false)
+            const response = await getWeatherData(searchCity);
+            if (response.error) {
+                setErrorText(true)
+            }
+            else {
+                setData(response);
+            }
+        }
     };
 
     const fetchCurrentUserLocation = () => {
@@ -32,6 +45,8 @@ export const WeatherProvider = (props) => {
                 setSearchCity,
                 fetchData,
                 fetchCurrentUserLocation,
+                errorText,
+                setErrorText,
             }}
         >
             {props.children}
